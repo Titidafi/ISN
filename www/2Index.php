@@ -70,7 +70,6 @@
                          $_POST['entpass']="";
                                                       
                                                       }
-
                                                       
                                                 
                        
@@ -87,13 +86,11 @@
                             //Obtention de l'info du fichier, le mot de passe 
                                 
                                 
-                                $file = fopen(."/inscrits/". $id . ".htm", 'r');
+                                $file = fopen("inscrits/". $id . ".htm", 'r');
                                 
-
                                 $truepass = fgets($file);
                                 
                             //Nous verifions que le mot de passe saisie et bien le mot de passe de ce compte
-
                                if($entpass == $truepass){
                                    
                          //C'est le cas donc affichage d'une URL de redirection
@@ -115,7 +112,6 @@
                                    echo "<span class='label-danger'>Ces identifiants sont incorrects</span>";
                                    
                                    }
-
                                    }else{
                                 
                          //Si le fichier n'existe pas ( et donc le compte), afficher cette phrase
