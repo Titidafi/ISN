@@ -54,9 +54,10 @@
                  <td id="right">
                 
                             <?php
-							session_start();
-							   $_SESSION['check']=0;
-							 
+              session_start();
+                $_SESSION['admin']=0;
+                $_SESSION['check']=0;
+               
                 
                                while(isset($_POST['id'])!==TRUE){
                         
@@ -81,7 +82,7 @@
                             
                             //Ici, la présence ou non du fichier ID et donc si l'utilisateur est inscrit
                             
-                            if(file_exists($id. ".htm")){
+                            if(file_exists("inscrits/".$id. ".htm")){
                                 
                             //Obtention de l'info du fichier, le mot de passe 
                                 
@@ -90,19 +91,19 @@
                                 
                                 $truepass = fgets($file);
                                 
-                            //Nous verifions que le mot de passe saisie et bien le mot de passe de ce compte
+                         //Nous verifions que le mot de passe saisie et bien le mot de passe de ce compte
                                if($entpass == $truepass){
                                    
                          //C'est le cas donc affichage d'une URL de redirection
                                    
                                   
-								
-								  $_SESSION['check']= 1;
-								  $_SESSION['id']= $id;
-								  if($id== "Axel" or "Melvin" or "Guillaume"){
-								  $_SESSION['admin']=1;}else{$_SESSION['admin']=0;}
-								  header('Location: site.php');
-								  
+                
+                  $_SESSION['check']= 1;
+                  $_SESSION['id']= $id;
+                  if(($id== "Axel") or ($id=="Melvin") or ($id=="Guillaume")){
+                  $_SESSION['admin']=1;}
+                  header('Location: site.php');
+                  
                                    exit();   
                                   }else{
                                    
@@ -136,7 +137,7 @@
                 </td>
             </tr>
 
-	
+  
            
 
         
@@ -145,12 +146,12 @@
     
         
         
-        		<div align='center'>
+            <div align='center'>
 
                     <a href="inscription.php" target="_self" class="btn btn-info">S'inscrire</a>
 
                
-			</div>
+      </div>
 
 
 <br>
