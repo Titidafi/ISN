@@ -87,7 +87,7 @@
                             //Obtention de l'info du fichier, le mot de passe 
                                 
                                 
-                                $file = fopen($id. ".htm", 'r');
+                                $file = fopen(."/inscrits/". $id . ".htm", 'r');
                                 
 
                                 $truepass = fgets($file);
