@@ -17,20 +17,43 @@
 					echo $_SESSION['id'];
 					echo "</span>";
 				   ?>
+
 </header>
 <body>
+
 
  <div class="udiv">
     <form method="POST" action="">
 
     <div class="jumbotron">
-	
-	<h1>
-			<font size=24>Qui sommes nous ?</font>
-			<hr>	
+          <div class="menu">
+	  
+        <ul>
+          <li><a href="site.php">Musiques</a></li>
+          <li><a href="a propos.php">A propos</a></li>		   
+		   <?php 
 		
-  </h1>
+		   if($_SESSION['admin']==1){
+			   
+			   echo '<li><a href="#">Admin</a></li><br>';
+			   
+		   }
+		   
+		   
+		   
+		   
+		   ?>
+       
+        </ul>
 
+      </div>
+<div class='clear'></div>
+	
+	<h1>Qui sommes nous ?</h1>
+	<hr>
+	<p>
+		
+	</p>
 
 
 </body>
